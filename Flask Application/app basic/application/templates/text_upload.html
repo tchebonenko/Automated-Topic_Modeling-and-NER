@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block content %}
+   <div class="content-section">
+      <div>
+        <a class="btn btn-outline-info" href="{{ url_for('process_text') }}" style="float: right;">Clear Text</a>
+      </div>
+      <br>
+      <br>
+      <form action="" method="POST" enctype="multipart/form-data">
+          {{ form.hidden_tag() }}
+          <fieldset class="form-group">
+              <div>
+                  {% if form.text.errors %}
+                      <div style="color: #db2e2e; font-size: 13px;">
+                          {% for error in form.text.errors %}
+                              <li>{{ error }}</li>
+                          {% endfor %}
+                      </div>
+                  {% else %}
+                      {{ form.text(cols="90", rows="10", class="form-control", placeholder="Insert text to process") }}
+                  {% endif %}
+              </div>
+          </fieldset>
+          <div class="form-group">
+              {{ form.submit(class="btn btn-outline-info") }}
+          </div>
+      </form>
+  </div>
+{% endblock %}

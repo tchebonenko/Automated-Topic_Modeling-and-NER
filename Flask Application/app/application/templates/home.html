@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>GLG-generalists</title>
+    <style>
+        body {
+          background-image: url("{{url_for('static', filename='home_page.jpg')}}");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+          <a
+          href="{{ url_for('process_text') }}"
+          style="width: 20%;
+                 line-height: 50px;
+                 border-radius: 3px;
+                 display: block;
+                 text-align: center;
+                 text-decoration: none;
+                 font-family: arial, sans-serif;
+                 font-size: 20px;
+                 font-style: normal;
+                 font-weight: bold;
+                 color: black;
+                 position: absolute;
+                 top: 50%;
+                 left: 12%;
+                 -ms-transform: translate(-50%, -50%);
+                 transform: translate(-50%, -50%);
+                 background: #ffffff;">
+            FourthBrain Demo
+        </a>
+    </div>
+</body>
+

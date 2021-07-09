@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+{% block content %}
+   <div class="content-section">
+        <div>
+          <a class="btn btn-outline-info" href="{{ url_for('process_text') }}" style="float: right;">Back</a>
+        </div>
+        <br>
+        <h5>Processed text:</h5>
+        <div id="textbox">
+            {{ output.text }}
+        </div>
+
+        <table>
+          <tr>
+            <th>Topics</th>
+            <th>Probability</th>
+            <th>Keywords</th>
+          </tr>
+          <tr>
+            <td style="width: 20%;">
+                <ol>
+                    <li>{{ output.topic_1 }}</li>
+                    <li>{{ output.topic_2 }}</li>
+                    <li>{{ output.topic_3 }}</li>
+                </ol>
+            </td>
+            <td style="width: 20%;">
+                <ol>
+                    <li>{{ output.topic_1_proba }}</li>
+                    <li>{{ output.topic_2_proba }}</li>
+                    <li>{{ output.topic_3_proba }}</li>
+                </ol>
+            </td>
+            <td style="width: 60%;">
+                <ul>
+                    {% for kw in output.key_words %}
+                        <li><b>{{ kw }}:</b></li>
+                        {% for entity in output.key_words[kw] %}
+                            &ensp;&ensp;{{ entity }}<br>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </td>
+          </tr>
+        </table>
+  </div>
+{% endblock %}
+

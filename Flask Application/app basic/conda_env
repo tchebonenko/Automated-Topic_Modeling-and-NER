@@ -1,0 +1,11 @@
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate fb-project
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate

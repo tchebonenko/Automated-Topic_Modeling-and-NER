@@ -1,0 +1,53 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 20px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  width: 100%;
+}
+
+td, th {
+  text-align: left;
+  padding: 8px;
+}
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+.content-section {
+  background: #ffffff;
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 3px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.error {
+    color: red
+}
+.success {
+    color: green
+}
+
+.center {
+  margin: 0 auto;
+  width: 10%;
+}
+
+#textbox {
+  background-color: #fffbc4 ;
+  padding: 10px ;
+  border: 1px solid #a8a685 ;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#kwbox {
+  background-color: blue ;
+  padding: 5px ;
+  border: 1px solid black ;
+  border-radius: 5px 5px 0px 0px;
+}
